@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className="max-w-lg mx-auto shadow-2xl  rounded-sm overflow-hidden md:max-w-2xl  " >
+    <div className="max-w-lg mx-auto shadow-2xl shadow-blue-400 rounded-sm overflow-hidden md:max-w-2xl  " >
       <div >
         <input
           type="text"
@@ -40,7 +40,7 @@ function App() {
           value={searchText}
           onChange={(e)=> setSearchText(e.target.value)}
           id="username"
-          className="w-full hover:translate-y-0 translate-y-2  transform transition duration-300 ease-in-out h-10 px-4 text-sm peer bg-blue-50 border mb-4 shadow-lg outline-none rounded-lg  border-blue-300"
+          className="w-full hover:translate-y-0 translate-y-2  transform transition duration-300 ease-in-out h-10 px-4 text-sm peer bg-blue-50 border mb-4 outline-none rounded-lg  shadow-md border-blue-300"
 
 placeholder="Search by first name"
         />
@@ -49,7 +49,7 @@ placeholder="Search by first name"
 <div  ref={userRef} >
       {filteredData.map((d) => {
           return (
-            <div className="flex items-center  text-black m-4  p-4 border-2 border-blue-400 rounded-2xl hover:translate-y-0 translate-y-4 pb-10 transform transition duration-300 ease-in-out " key={d.id}  >
+            <div className="flex items-center shadow-md shadow-blue-300  text-black m-4  p-4 border-2 border-blue-400 rounded-2xl hover:translate-y-0 translate-y-4 pb-10 transform transition duration-300 ease-in-out " key={d.id}  >
               <img className="rounded-lg object-cover hover:bg-blue-600 transition duration-500 hover:scale-105 md:h-full md:w-48 " src={d.avatar} alt="user-name" />
               <div className="mx-10 bg-zinc-100 p-4 text-xl border-green-400 rounded-2xl ">
                 <p className="font-bold text-xl bg-blue-100 rounded-xl p-2"> {d.first_name} {d.last_name} </p>
